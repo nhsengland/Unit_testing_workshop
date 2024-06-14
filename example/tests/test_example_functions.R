@@ -2,29 +2,29 @@ library(testthat)
 
 source("../src/example_functions.R")
 
-test_that("add_two_numbers works as expected, for small numbers", {
+test_that("minus_two_numbers works as expected, for small numbers", {
   # Arrange
   input_1 = 1
   input_2 = 5
   
-  expected = 6
+  expected = 4
   
   # Act
-  actual = add_two_numbers(input_1, input_2)
+  actual = minus_two_numbers(input_1, input_2)
   
   # Assert
   expect_equal(expected, actual)
 })
 
-test_that("add_two_numbers works as expected, for large numbers", {
+test_that("minus_two_numbers works as expected, for large numbers", {
   # Arrange
   input_1 = 10000000
   input_2 = 50000000
   
-  expected = 60000000
+  expected = 40000000
   
   # Act
-  actual = add_two_numbers(input_1, input_2)
+  actual = minus_two_numbers(input_1, input_2)
   
   # Assert
   expect_equal(expected, actual)
